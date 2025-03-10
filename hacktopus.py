@@ -1,28 +1,31 @@
 import os
-from port_scanner import port_scan
-from web_vuln_scanner import scan  # Import the advanced scan function
 
-def main_menu():
+def run_keylogger():
+    print("📝 Starting Keylogger...")
+    os.system("sudo python3 keylogger.py")
+
+def main():
     while True:
-        print("\n🐙 Hacktopus-Kali - Cybersecurity Toolkit 🐙\n")
+        print("\n🎩 Hacktopus-Kali - Advanced Cybersecurity Toolkit")
         print("1️⃣ Port Scanner")
         print("2️⃣ Web Vulnerability Scanner")
-        print("3️⃣ Exit")
+        print("3️⃣ Keylogger")
+        print("4️⃣ Exit")
         
-        choice = input("Choose an option: ")
-
+        choice = input("👉 Select an option: ")
+        
         if choice == "1":
-            target = input("Enter target IP address: ")
-            port_scan(target)  # Run the Port Scanner
+            os.system("python3 port_scanner.py")
         elif choice == "2":
-            target = input("Enter target URL (e.g., http://example.com): ")
-            scan(target)  # Run the advanced Web Vulnerability Scanner
+            os.system("python3 web_vuln_scanner.py")
         elif choice == "3":
-            print("Exiting Hacktopus-Kali...")
+            run_keylogger()
+        elif choice == "4":
+            print("👋 Exiting Hacktopus-Kali...")
             break
         else:
-            print("Invalid choice, try again!")
+            print("⚠ Invalid option! Try again.")
 
 if __name__ == "__main__":
-    main_menu()
+    main()
 
