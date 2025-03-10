@@ -11,8 +11,8 @@ def main_menu():
         choice = input("Choose an option: ")
 
         if choice == "1":
-            target = input("Enter target IP: ")
-            port_scan(target, range(1, 1025))  # Run the port scanner on common ports
+            target = input("Enter target IP address: ")
+            port_scan(target)  # Call the port scanner function
         elif choice == "3":
             print("Exiting Hacktopus-Kali...")
             break
@@ -21,3 +21,4 @@ def main_menu():
 
 if __name__ == "__main__":
     main_menu()
+
