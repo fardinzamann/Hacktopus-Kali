@@ -23,6 +23,10 @@ def run_exploit_scanner():
 # Function to run Brute Force Login Tester
 def run_brute_force_tester():
     os.system("python3 brute_force_tester.py")
+    
+    
+def run_wifi_deauthenticator():
+    os.system("python3 wifi_deauthenticator.py")
 
 def main():
     while True:
@@ -33,7 +37,8 @@ def main():
         print("4️⃣ MAC Address Changer")
         print("5️⃣ Exploit Scanner")
         print("6️⃣ Brute Force Login Tester")
-        print("7️⃣ Exit")
+        print("7️⃣ Wireless Network Deauthenticator")
+        print("8️⃣ Exit")
 
         choice = input("👉 Select an option: ")
 
@@ -48,8 +53,10 @@ def main():
         elif choice == "5":
             run_exploit_scanner()
         elif choice == "6":
-            run_brute_force_tester()  # Run the Brute Force Login Tester
+            run_brute_force_tester()
         elif choice == "7":
+            run_wifi_deauthenticator()  # Run the Wireless Network Deauthenticator
+        elif choice == "8":
             print("👋 Exiting Hacktopus-Kali...")
             break
         else:
