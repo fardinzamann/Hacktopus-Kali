@@ -17,7 +17,7 @@ Hacktopus-Kali is an advanced cybersecurity toolkit designed for Kali Linux. It 
 ## Requirements  
 - **Operating System**: Kali Linux  
 - **Python 3.x**  
-- Required Libraries (install via `pip`):  
+- **Required Libraries** (install via `pip`):  
   ```bash
   pip install requests beautifulsoup4 pynput scapy cryptography
 
@@ -68,3 +68,8 @@ If you encounter any issues with the toolkit, try the following steps:
  3. Refer to the [Kali Linux Documentation](https://www.kali.org/docs/) for further troubleshooting.
 
  If the issue persists, feel free to open an issue in the [GitHub repository](https://github.com/fardinzamann/Hacktopus-Kali/issues).
+
+ ## 📝 Ongoing Development & Future Updates
+Hacktopus-Kali is still under active development, and new features are being added regularly to improve functionality and expand its capabilities. I aim to release updates every 2 months, introducing new tools and enhancements based on community feedback and emerging cybersecurity trends.
+
+Stay tuned for future versions, and feel free to contribute suggestions or report bugs!
