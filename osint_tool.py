@@ -5,18 +5,18 @@ from geopy.geocoders import Nominatim
 import shodan
 
 def get_domain_info(domain):
-    print("\n🔍 Fetching domain information...")
+    print("\n Fetching domain information...")
     w = whois.whois(domain)
     return w
 
 def get_ip_info(ip):
-    print("\n🔍 Fetching IP information...")
+    print("\n Fetching IP information...")
     geolocator = Nominatim(user_agent="OSINT_Tool")
     location = geolocator.geocode(ip)
     return location
 
 def get_social_media_info(username):
-    print(f"\n🔍 Gathering social media info for {username}...")
+    print(f"\n Gathering social media info for {username}...")
     social_media_urls = [
         f"https://www.twitter.com/{username}",
         f"https://www.instagram.com/{username}",
@@ -33,7 +33,7 @@ def get_social_media_info(username):
     return profile_info
 
 def get_shodan_info(ip):
-    print("\n🔍 Fetching Shodan information...")
+    print("\n Fetching Shodan information...")
     SHODAN_API_KEY = "YOUR_SHODAN_API_KEY"
     api = shodan.Shodan(SHODAN_API_KEY)
     try:
@@ -43,7 +43,7 @@ def get_shodan_info(ip):
         return f"Error: {e}"
 
 def main():
-    print("🎩 Hacktopus-Kali - Automated OSINT Tool")
+    print("Hacktopus-Kali - Automated OSINT Tool")
     
     # Get user input for OSINT gathering
     choice = input("What do you want to gather information on?\n1. Domain\n2. IP Address\n3. Social Media Username\n4. Exit\n👉 Select an option: ")
@@ -73,7 +73,7 @@ def main():
         return
 
     else:
-        print("⚠ Invalid option! Try again.")
+        print("Invalid option! Try again.")
 
 if __name__ == "__main__":
     main()
