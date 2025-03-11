@@ -27,6 +27,9 @@ def run_brute_force_tester():
     
 def run_wifi_deauthenticator():
     os.system("python3 wifi_deauthenticator.py")
+    
+def run_osint_tool():
+    os.system("python3 osint_tool.py")
 
 def main():
     while True:
@@ -38,7 +41,8 @@ def main():
         print("5️⃣ Exploit Scanner")
         print("6️⃣ Brute Force Login Tester")
         print("7️⃣ Wireless Network Deauthenticator")
-        print("8️⃣ Exit")
+        print("8️⃣ Automated OSINT Tool")
+        print("9️⃣ Exit")
 
         choice = input("👉 Select an option: ")
 
@@ -55,8 +59,10 @@ def main():
         elif choice == "6":
             run_brute_force_tester()
         elif choice == "7":
-            run_wifi_deauthenticator()  # Run the Wireless Network Deauthenticator
+            run_wifi_deauthenticator()
         elif choice == "8":
+            run_osint_tool()  # Run the OSINT Tool
+        elif choice == "9":
             print("👋 Exiting Hacktopus-Kali...")
             break
         else:
