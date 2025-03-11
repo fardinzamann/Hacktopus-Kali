@@ -20,6 +20,10 @@ def run_mac_changer():
 def run_exploit_scanner():
     os.system("python3 exploit_scanner.py")
 
+# Function to run Brute Force Login Tester
+def run_brute_force_tester():
+    os.system("python3 brute_force_tester.py")
+
 def main():
     while True:
         print("\n🎩 Hacktopus-Kali - Advanced Cybersecurity Toolkit")
@@ -28,21 +32,24 @@ def main():
         print("3️⃣ Keylogger")
         print("4️⃣ MAC Address Changer")
         print("5️⃣ Exploit Scanner")
-        print("6️⃣ Exit")
+        print("6️⃣ Brute Force Login Tester")
+        print("7️⃣ Exit")
 
         choice = input("👉 Select an option: ")
 
         if choice == "1":
-            run_port_scanner()
+            os.system("python3 port_scanner.py")
         elif choice == "2":
-            run_web_vuln_scanner()
+            os.system("python3 web_vuln_scanner.py")
         elif choice == "3":
             run_keylogger()
         elif choice == "4":
             run_mac_changer()
         elif choice == "5":
-            run_exploit_scanner()  # Run the Exploit Scanner
+            run_exploit_scanner()
         elif choice == "6":
+            run_brute_force_tester()  # Run the Brute Force Login Tester
+        elif choice == "7":
             print("👋 Exiting Hacktopus-Kali...")
             break
         else:
@@ -50,4 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
