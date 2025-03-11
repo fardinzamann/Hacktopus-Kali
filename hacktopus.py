@@ -1,26 +1,26 @@
 import os
 
-# Function to run Port Scanner
+#Port Scanner
 def run_port_scanner():
     os.system("python3 port_scanner.py")
 
-# Function to run Web Vulnerability Scanner
+#Vulnerability Scanner
 def run_web_vuln_scanner():
     os.system("python3 web_vuln_scanner.py")
 
-# Function to run Keylogger
+#Keylogger
 def run_keylogger():
     os.system("python3 keylogger.py")
 
-# Function to run MAC Address Changer
+#MAC
 def run_mac_changer():
     os.system("python3 mac_address_changer.py")
 
-# Function to run Exploit Scanner
+#Exploit Scanner
 def run_exploit_scanner():
     os.system("python3 exploit_scanner.py")
 
-# Function to run Brute Force Login Tester
+#Brute Force
 def run_brute_force_tester():
     os.system("python3 brute_force_tester.py")
     
@@ -61,7 +61,7 @@ def main():
         elif choice == "7":
             run_wifi_deauthenticator()
         elif choice == "8":
-            run_osint_tool()  # Run the OSINT Tool
+            run_osint_tool()
         elif choice == "9":
             print("👋 Exiting Hacktopus-Kali...")
             break
