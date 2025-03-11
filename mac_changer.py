@@ -26,18 +26,18 @@ def change_mac(interface):
     subprocess.call(["sudo", "ifconfig", interface, "hw", "ether", random_mac])
     subprocess.call(["sudo", "ifconfig", interface, "up"])
 
-    print(f"✅ MAC address for {interface} changed to {random_mac}")
+    print(f" MAC address for {interface} changed to {random_mac}")
     return random_mac
 
 def automate_mac_change(interface, num_changes=2, delay=3):
     """Automatically changes MAC address a given number of times with a delay in between."""
     for i in range(num_changes):
-        print(f"\n🔄 Changing MAC address {i+1}/{num_changes}...")
+        print(f"\n Changing MAC address {i+1}/{num_changes}...")
         current_mac = get_current_mac(interface)
         print(f"Current MAC: {current_mac}")
-        time.sleep(delay)  # Wait for a short delay between changes
+        time.sleep(delay)  
         change_mac(interface)
-        time.sleep(delay)  # Wait before the next change
+        time.sleep(delay) 
 
 def main():
     interface = input("Enter the network interface (e.g., eth0, wlan0): ")
@@ -47,7 +47,7 @@ def main():
     if change.lower() == "y":
         automate_mac_change(interface)
     else:
-        print("👋 Exiting...")
+        print("Exiting...")
 
 if __name__ == "__main__":
     main()
