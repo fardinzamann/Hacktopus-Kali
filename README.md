@@ -56,3 +56,15 @@ This will launch the main menu with options to run each of the tools.
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) file for details.
 
+
+## ❗ Important Note
+Hacktopus-Kali is intended for ethical hacking and cybersecurity education. Use it responsibly and only on systems or networks for which you have explicit permission. Unauthorized use of these tools can be illegal and unethical.
+
+## 🔧 Troubleshooting
+If you encounter any issues with the toolkit, try the following steps:
+
+ 1. Ensure all dependencies are installed properly.
+ 2. Check for any errors or missing libraries.
+ 3. Refer to the [Kali Linux Documentation](https://www.kali.org/docs/) for further troubleshooting.
+
+ If the issue persists, feel free to open an issue in the [GitHub repository](https://github.com/fardinzamann/Hacktopus-Kali/issues).
