@@ -2,7 +2,6 @@ import requests
 import paramiko
 from time import sleep
 
-# Web Login Brute Forcer
 def web_login_bruteforce(url, username_list, password_list):
     print("\n🔍 Attempting brute force attack on web login...")
 
@@ -19,7 +18,6 @@ def web_login_bruteforce(url, username_list, password_list):
     print("⚠ Brute force failed on web login!")
     return None, None
 
-# SSH Login Brute Forcer
 def ssh_login_bruteforce(host, username_list, password_list):
     print("\n🔍 Attempting brute force attack on SSH login...")
 
@@ -47,13 +45,10 @@ def ssh_login_bruteforce(host, username_list, password_list):
 def main():
     print("\n🎩 Hacktopus-Kali - Brute Force Login Tester")
 
-    # Web Login Brute Force Example
     url = input("Enter the target URL (e.g., http://example.com/login): ")
     username_list = ['admin', 'user', 'guest']
     password_list = ['12345', 'password', 'admin']
     web_login_bruteforce(url, username_list, password_list)
-
-    # SSH Login Brute Force Example
     host = input("Enter the SSH target host (e.g., 192.168.1.100): ")
     username_list = ['root', 'admin', 'user']
     password_list = ['root', 'admin', 'password']
